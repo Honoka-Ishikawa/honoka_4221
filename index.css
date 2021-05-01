@@ -1,5 +1,22 @@
-p{color: aqua;}
+p.sub-title1{color: aqua;}
+p#sub-title2{color: yellowgreen;}
+
+.company{color: violet;
+        font-size: large;}
 h1{
     color: red;
     font-size: 50pt;
 font-weight: bold;}
+
+div.box1{height: 100px;
+    width: 100px;
+background-color: royalblue;}
+
+div.box2{height: 100px;
+    width: 100px;
+background-color: magenta;}
+
+div.box3{height: 100px;
+    width: 100px;
+    
+background-color: rgb(142, 225, 65);}
