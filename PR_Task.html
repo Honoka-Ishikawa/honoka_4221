@@ -3,34 +3,78 @@
     <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=dvce-width,initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=dvce-width,initial-scale=1.0"> -->
    
     <title>自己PR</title>
 </head>
 <body>
-    <style type="text/css">
-    body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image:url("C:\Users\Honoka Ishikawa\Desktop\Practice\img\スクリーンショット (38).png");
-  
     
-    </style>
+    <link rel="stylesheet" type="text/css" href="PR_Task.css">
+   
+    <header>
     <h1>
         私の自己PRポイント
     </h1>
-<nav><a href="#a">1.すぐに諦めない</a>
-<a href="#b">2.すぐに気持ちを切り替えられる</a></nav>
+<nav><a class="Pr1" href="#a" > 1.すぐに諦めない</a>
+    <br>
+<a class="Pr2" href="#b">2.すぐに気持ちを切り替えられる</a></nav>
+
+<img src="C:\Users\Honoka Ishikawa\Desktop\Practice\shinsyakaijin_woman2.png" class="illust1">
+    <img src="C:\Users\Honoka Ishikawa\Desktop\Practice\group_business_syukatsu.png" class="illust2">
+
+</header>
+<br /><br /><br /><br /><br /><br /><br /><br />
+
 
 
 
 
 
 <ul>
-<li id="a">つよみつよみつよみつよみつよみつよみつよみつよみ</li>
-<li id="b">つよみつよみつよみつよみつよみつよみ</li>
-</ul>
+<section><div class="fade-in"><li id="a" class="PrSentence1" > 1.すぐに諦めない。<br>
+    <br>
+    何事にも真剣に取り組み、途中で投げ出さず、最後まで
+    やりきります。<br>
+    中学・高校と美術部に所属していた時に、写実的な人物画を<br>
+    描いていた頃に、自分の当時の技量では難しく、何度も諦めそうに<br>
+    なりましたが、途中で投げ出さず、なんとか絵を完成させる事ができました。<br>
+    こうした経験を、仕事の中でも活かして頑張りたいです。<br></li>
+    <img src="C:\Users\Honoka Ishikawa\Desktop\Practice\bijutsu_paint_woman2.png" class="illust3"></section></div>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br />
+
+<section><div class="fade-in"><li id="b" class="PrSentence2"> 2.物事を楽観的に考えられる<br>
+<br>
+    なにかトラブルやミスを起こしてしまっても、落ち込み過ぎずに、<br>
+    すぐに気持ちを切り替えることができます。<br>
+    気持ちを切り替えることだけでなく、なぜそのトラブルやミスが<br>
+    発生したのかを分析して、再発防止できるように努めるように<br>
+    しています。
+    
+
+<img src="C:\Users\Honoka Ishikawa\Desktop\Practice\business_woman_macho.png" class="illust4"></li></section>
+</ul></div>
+
+<br><br><br><br>
+
+<script>
+    'use strict';
+    let scrollAnimationElm = document.querySelectorAll('.fade-in');
+let scrollAnimationFunc = function(){
+    for(let i = 0; i < scrollAnimationElm.length; i++){
+        let triggerMargin = 300;
+        if(window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin){
+            scrollAnimationElm[i].classList.add('show'); 
+        }
+    }
+}
+window.addEventListener('load', scrollAnimationFunc);
+window.addEventListener('scroll', scrollAnimationFunc);
+</script>
+
 </body>
+
     </html>
-</html>
+
+    </html>

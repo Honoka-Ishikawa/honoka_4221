@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=dvce-width,initial-scale=1.0">
+    
+    <title>animation</title>
+    
+</head>
+<body>
+    <header>
+        <h1>ヘッダー</h1>
+      </header>
+      <section>
+        <div class="sa sa--up">要素1</div>
+        <div class="sa sa--up">要素2</div>
+        <div class="sa sa--up">要素3</div>
+        <div class="sa sa--up">要素4</div>
+        <div class="sa sa--up">要素5</div>
+        <div class="sa sa--up">要素6</div>
+        <div class="sa sa--up">要素7</div>
+        <div class="sa sa--up">要素8</div>
+      </section>
+      <section>
+        <div class="sa sa--lr">要素9</div>
+        <div class="sa sa--rl">要素10</div>
+        <div class="sa sa--up">要素11</div>
+        <div class="sa sa--down">要素12</div>
+        <div class="sa sa--scaleUp">要素13</div>
+        <div class="sa sa--scaleDown">要素14</div>
+        <div class="sa sa--rotateL">要素15</div>
+        <div class="sa sa--rotateR">要素16</div>
+      </section>
+    <style type="text/css">
+    body {
+  margin: 0;
+}
+ 
+header {
+  background: #0cc;
+  height: 700px;
+  padding: 100px;
+  box-sizing: border-box;
+}
+ 
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5%;
+  box-sizing: border-box;
+}
+ 
+section div {
+  width: 23%;
+  height: 300px;
+  margin: 0 0 2.5vw;
+  padding: 3%;
+  box-sizing: border-box;
+  background: #09c;
+}
+.sa {
+  opacity: 0;
+  transition: all .5s ease;
+}
+ 
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+ 
+.sa--lr {
+  transform: translate(-100px, 0);
+}
+ 
+.sa--rl {
+  transform: translate(100px, 0);
+}
+ 
+.sa--up {
+  transform: translate(0, 100px);
+}
+ 
+.sa--down {
+  transform: translate(0, -100px);
+}
+ 
+.sa--scaleUp {
+  transform: scale(.5);
+}
+ 
+.sa--scaleDown {
+  transform: scale(1.5);
+}
+ 
+.sa--rotateL {
+  transform: rotate(180deg);
+}
+ 
+.sa--rotateR {
+  transform: rotate(-180deg);
+}
+    </style>
+
+    <script>
+        var scrollAnimationElm = document.querySelectorAll('.sa');
+var scrollAnimationFunc = function() {
+  for(var i = 0; i < scrollAnimationElm.length; i++) {
+    var triggerMargin = 300;
+    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+      scrollAnimationElm[i].classList.add('show');
+    }
+  }
+}
+window.addEventListener('load', scrollAnimationFunc);
+window.addEventListener('scroll', scrollAnimationFunc);
+
+    </script>
+</body>
+
+</html>
+</html>
